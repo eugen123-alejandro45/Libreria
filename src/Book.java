@@ -8,6 +8,7 @@ public class Book {
         this.title = title;
         this.author = author;
         this.price = price;
+        qtyInStock = 0;
     }
 
     public Book (String title, Author author, double price, int qtyInStock) {
@@ -41,16 +42,20 @@ public class Book {
         this.qtyInStock = qtyInStock;
     }
 
-    public Author getAuthorName (Author name) {
-        return getName();
+    public String getAuthorName () {
+        return author.getName();
     }
 
-    public Author getAuthorEmail () {
-        return
+    public String getAuthorEmail () {
+        return author.getEmail();
+    }
+
+    public char getAuthorGender() {
+        return author.getGender();
     }
 
     @Override
     public String toString() {
-        return "Title: " + getTitle() + " by " + getAuthor() +  " ( " +  toString() + ")";
+        return "Title: " + title + " by " + author.toString();
     }
 }
